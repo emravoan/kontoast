@@ -1,3 +1,7 @@
 .*
-!index.js
+*.json
+*.config.ts
+src
+
 !dist
+!index.js
