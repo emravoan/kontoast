@@ -1,0 +1,37 @@
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "root";
+
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/close";
+
+// Loop over each utility property
+@each $key, $utility in $utilities {
+	@if type-of($utility) == "map" {
+		@include generate-utility($utility, "");
+	}
+}
+
+// Toast
+.toast-container {
+	padding: 1.25rem;
+	position: fixed;
+	z-index: 2050;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@include media-breakpoint-down(sm) {
+		padding: 0.625rem;
+	}
+
+	.toast {
+		@include media-breakpoint-down(sm) {
+			width: calc(100vw - 20px);
+		}
+	}
+}

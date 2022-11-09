@@ -1,0 +1,41 @@
+{
+  "name": "@emravoan/kontoast",
+  "version": "1.0.0-alpha.0",
+  "description": "KonToast - Simple JS Toast",
+  "author": "EM Ravoan",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config --configPlugin typescript",
+    "watch": "rollup --config --configPlugin typescript -w"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.10.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/node": "^18.7.8",
+    "bootstrap": "5.1.3",
+    "esbuild": "^0.15.7",
+    "prettier": "^2.7.1",
+    "rollup": "^2.78.1",
+    "rollup-plugin-copy-assets": "^2.0.3",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^4.9.3",
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.54.5",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emravoan/kontoast.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/emravoan/kontoast/issues"
+  },
+  "homepage": "https://github.com/emravoan/kontoast#readme"
+}
