@@ -36,11 +36,12 @@ export default class KonToast {
   static success(option = { title: '', text: '' }) {
     KonToast.show({
       title: option.title,
-      text: option.text
+      text: option.text,
+      type: 'success'
     });
   }
 
-  static warning(option = { title: '', text: '' }) {
+  static warning(option: { title: '', text: '' }) {
     KonToast.show({
       title: option.title,
       text: option.text,
@@ -48,7 +49,7 @@ export default class KonToast {
     });
   }
 
-  static error(option = { title: '', text: '' }) {
+  static error(option: { title: '', text: '' }) {
     KonToast.show({
       title: option.title,
       text: option.text,
