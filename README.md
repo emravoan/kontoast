@@ -6,13 +6,38 @@
 import KonToast from '@emravoan/kontoast';
 
 // Success Toast
-KonToast.success('Success', 'Your data has been saved!');
+KonToast.success({
+  delay: 10000,
+  title: 'Success',
+  text: 'Your data has been saved!',
+});
 
 // Warning Toast
-KonToast.warning('Warning', "You won't be able to revert this!");
+KonToast.success({
+  delay: 10000,
+  title: 'Warning',
+  text: "You won't be able to revert this!",
+});
 
 // Error Toast
-KonToast.error('Oops...', 'Something went wrong!');
+KonToast.success({
+  delay: 10000,
+  title: 'Error',
+  text: `<div class="text-center"><h6>Oops!</h6>Something went wrong.</div>`,
+});
+```
+
+#### HTML File
+
+```html
+<script type="module">
+  import KonToast from 'https://cdn.skypack.dev/@emravoan/kontoast';
+
+  KonToast.success({
+    title: 'Success',
+    text: 'Great Job!',
+  });
+</script>
 ```
 
 ## Usage
@@ -25,17 +50,29 @@ import KonToast from '@emravoan/kontoast';
 
 // CommonJS
 const KonToast = require('@emravoan/kontoast');
+
+// Skypack CDN
+import KonToast from 'https://cdn.skypack.dev/@emravoan/kontoast';
 ```
 
 ### Methods
 
 ```js
 // Success Toast
-KonToast.success('Success', 'Your data has been saved!');
+KonToast.success(option);
 
 // Warning Toast
-KonToast.warning('Warning', "You won't be able to revert this!");
+KonToast.success(option);
 
 // Error Toast
-KonToast.error('Oops...', 'Something went wrong!');
+KonToast.success(option);
+
+// Toast Option
+{
+  type: string; // default: 'success'
+  text: string; // required
+  title: string; // required
+  delay: string | number; // default: 5000
+  autohide: string | boolean; // default: true
+}
 ```
