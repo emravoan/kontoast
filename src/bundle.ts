@@ -43,33 +43,24 @@ export default class KonToast {
     elToast.addEventListener('hidden.bs.toast', () => elToast.remove());
   }
 
-  static success(option = { title: '', text: '', delay: 5000, autohide: true }) {
+  static success(option: IOption) {
     KonToast.show({
+      ...option,
       type: 'success',
-      text: option.text,
-      title: option.title,
-      delay: option.delay,
-      autohide: option.autohide,
     });
   }
 
-  static warning(option = { title: '', text: '', delay: 5000, autohide: true }) {
+  static warning(option: IOption) {
     KonToast.show({
+      ...option,
       type: 'warning',
-      text: option.text,
-      title: option.title,
-      delay: option.delay,
-      autohide: option.autohide,
     });
   }
 
-  static error(option = { title: '', text: '', delay: 5000, autohide: true }) {
+  static error(option: IOption) {
     KonToast.show({
+      ...option,
       type: 'error',
-      text: option.text,
-      title: option.title,
-      delay: option.delay,
-      autohide: option.autohide,
     });
   }
 }
